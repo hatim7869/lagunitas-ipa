@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: druk, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+}
+
+@font-face {
+    font-family: druk;
+    src: url(./fonts/Druk-Bold.ttf);
+}
+
+@font-face {
+    font-family: copper;
+    src: url(./fonts/copperplate-b-webfont.ttf);
+}
+
+@font-face {
+    font-family: yank;
+    src: url(./fonts/yank-webfont.ttf);
+}
+
+@font-face {
+    font-family: robot;
+    src: url(./fonts/robotoslab-regular-webfont.ttf);
+}
+
+#main {
+    position: relative;
+    background-color: #F7F7F7;
+    overflow-x: hidden;
+    /* padding: 0 10vw; */
+
+}
+
+#nav1 {
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 2vh 2vw 2vh 8vw;
+    width: 100vw;
+    /* background-color: red; */
+
+}
+
+#nav1 img {
+    width: 10vw;
+}
+
+#nav1 button {
+    padding: 1.5vh 1.5vw;
+    color: #ffffff;
+    font-size: 1vw;
+    border: none;
+    background-color: #C8102E;
+}
+
+#nav2 {
+    z-index: 999;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 3%;
+    height: 90vh;
+    border-right: 4px ridge black;
+    width: 7vw;
+    padding: 0 3vw;
+
+}
+
+#nav2 i {
+    font-size: 1.5vw;
+    margin-top: 3vh;
+    display: block;
+}
+
+.bottle {
+    position: absolute;
+    left: 52vw;
+    top: 50vh;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    height: 44vw;
+}
+
+#start {
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+}
+
+#start>h1 {
+    font-family: druk heavy;
+    background: url(https://lagunitas.com/wp-content/themes/lagunitas/assets/images/texture.png);
+    background-position: center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    background-color: rgb(190, 0, 28);
+    -webkit-font-smoothing: antialiased;
+    width: 70vw;
+    font-size: 17vw;
+    cursor: default;
+    margin-top: -5vh;
+    line-height: 13.5vw;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 97;
+    background-repeat: no-repeat;
+}
+
+#start h1::before {
+
+    content: "";
+    background-image: url(./images/texture.png);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+}
+
+#start h1 img {
+    position: absolute;
+    height: 10vh;
+    top: -5%;
+    left: 33%;
+    transform: rotate(-30deg);
+    background-size: cover;
+
+}
+
+#page-1 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+#page-1 #midset {
+    position: relative;
+    /* height: 60vh; */
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vh 2vw 2vh 8vw;
+
+}
+
+#midset #midleft {
+    height: 100%;
+    width: 65%;
+}
+
+
+#midleft>p {
+    font-family: yank;
+    font-size: 30px;
+}
+
+#midleft h1 {
+    position: relative;
+    font-size: 7vw;
+    width: 20vw;
+    line-height: 6vw;
+    margin: 5vh 0;
+}
+
+#midleft h1::before {
+
+    content: "";
+    background-image: url(./images/texture.png);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#midleft span p {
+    font-family: sans-serif;
+    width: 30vw;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#midleft button {
+    background-color: black;
+    color: #ffffff;
+    padding: 1.5vh 2.5vw;
+    font-size: 20px;
+    margin: 5vh 0;
+}
+
+#midset #midright {
+    height: 100%;
+    width: 35%;
+    padding: 5vh 5vw;
+    border: 2px solid black;
+}
+
+#midset #midright span {
+    font-size: 3vw;
+}
+
+#midright .under {
+    margin: 5vh 0;
+}
+
+#midright .under h1 {
+    font-size: 2vw;
+}
+
+#midright .under>p {
+    font-weight: 100;
+    font-family: sans-serif;
+    font-size: 14px;
+    border-bottom: 2px solid black;
+}
+
+#midright .under .percent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.percent h2 {
+    font-size: 5vw;
+}
+
+.percent p {
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 12px;
+    width: 25vh;
+}
+
+#page-2 {
+    position: relative;
+}
+
+#page-2 h1 {
+    color: #C8102E;
+
+    width: 100vw;
+    font-size: 45vh;
+    text-align: center;
+}
+
+#page-2 h1::before {
+
+    content: "";
+    background-image: url(./images/texture.png);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#midset2 {
+    position: relative;
+    padding: 2vh 4vw 2vh 8vw;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#midset2 #leftmid2 #img {
+    position: relative;
+    height: 35vh;
+    width: 30vw;
+    background-color: red;
+}
+
+#midset2 #leftmid2 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#midset2 #leftmid2 #img i {
+    color: white;
+    background-color: #C8102E;
+    border-radius: 50%;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#midset2 #leftmid2 p {
+    font-family: yank;
+    font-size: 25px;
+    font-weight: 500;
+    width: 25vw;
+    margin-bottom: 2vh;
+}
+
+#midset2 #rightmid2>p {
+    width: 25vw;
+    font-family: robot;
+}
+
+#style h2 {
+    margin: 3vh 0;
+    font-size: 3vw;
+}
+
+#style p {
+    width: 25vw;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-weight: 400;
+    margin: 2vh 0;
+}
+
+#images {
+    padding: 2vh 4vw 2vh 8vw;
+}
+
+#flex-img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+.img1 {
+    position: relative;
+    height: 50vh;
+}
+
+#flex-img .img2 {
+    position: relative;
+
+    margin-left: 15vw;
+    height: 50vh;
+}
+
+#flex-img .img3 {
+    position: relative;
+    height: 60vh;
+}
+
+#images img {
+    height: 100%;
+}
+
+#images .img4 {
+    height: 55vh;
+    width: 100vw;
+    position: relative;
+}
+
+#images .img4 img {
+    transform: rotate(-15deg);
+    position: absolute;
+    left: 3%;
+    top: -25%;
+    height: 55vh;
+}
+
+#images .detl {
+    position: absolute;
+    text-align: center;
+    width: 15vw;
+    top: 7vh;
+    left: 6vw;
+    color: #ffffff;
+}
+
+#images .detl i {
+    font-size: 30px;
+}
+
+#images .img3 .detl {
+    left: 10vw;
+}
+
+#images .detl h2 {
+    border-bottom: 2px solid white;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 3vh 0 .5vh 0;
+}
+
+#images .detl p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+#page-3 {
+    position: relative;
+    text-align: center;
+    min-height: 100vh;
+
+}
+
+#page-3>p {
+    font-family: yank;
+    font-size: 2rem;
+}
+
+#page-3 h1 {
+    position: relative;
+    font-size: 10rem;
+    line-height: 9rem;
+}
+
+#page-3 h1::before {
+
+    content: "";
+    background-image: url(./images/texture.png);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#page-3 #ipa-bottle {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+#page-3 .ipas:nth-child(2) img {
+    height: 60vh;
+    width: 18vw;
+}
+
+#page-3 .ipas:nth-child(3) #ig {
+    height: 57.5vh;
+    width: 18vw;
+}
+
+#page-3 .ipas p {
+    font-family: robot;
+    margin-bottom: 2vh;
+
+}
+
+#page-4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12vh 2vw 12vh 8vw;
+
+}
+
+#page-4 img {
+    width: 50vw;
+    height: 60vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+#page-4 .recipes {
+    width: 30vw;
+}
+
+#page-4 .recipes h2 {
+    font-family: yank;
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+
+#page-4 .recipes h1 {
+    font-family: copper, sans-serif;
+    font-size: 3.5rem;
+    width: 30vw;
+    margin: 5vh 0;
+}
+
+#page-4 .recipes p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#page-4 .recipes button {
+    background-color: black;
+    padding: 1vh 2vw;
+    margin-top: 3vh;
+    color: #ffffff;
+}
